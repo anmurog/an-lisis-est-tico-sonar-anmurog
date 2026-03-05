@@ -214,7 +214,8 @@ public class Maze2D {
             array.add(line);
         }
         br.close();
-        return new Maze2D((String[]) array.toArray());
+        return new Maze2D(array.toArray(new String[0]));
+    
     }
 
     /**
