@@ -47,6 +47,9 @@ public class PriorityFibonacciQueue<N> extends AbstractQueue<N> {
 
             @Override
             public N next() {
+                if (!hasNext()) {
+                    throw new java.util.NoSuchElementException();
+                }
                 return heap.dequeueMin().getValue();
             }
 
